@@ -104,7 +104,7 @@ function SaveUser() {
     <div className='container'>
       <div className='header-container'>
         <h1 className='mb-3 mt-5 text-center'>{userText.header}</h1>
-        <Link to='/'>
+        <Link to='/home'>
           <Button variant='primary'>Back</Button>
         </Link>
       </div>

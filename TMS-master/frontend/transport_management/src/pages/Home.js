@@ -45,7 +45,7 @@ function Home() {
     <div className='container'>
       <div className='header-container'>
         <h1 className='mb-3 mt-5'>User List</h1>
-        <Link to='save'>
+        <Link to='/save'>
           <Button variant='primary'>Create User</Button>
         </Link>
       </div>

@@ -1,92 +1,58 @@
-const Booking = require("../models/user")
+// user-controller.js
+const User = require("../models/user");
 
-module.exports.userList = (req, res) => {
-  Booking.find({})
-    .then((data) => {
-      res.status(200).send({
-        success: true,
-        payload: data
-      });
-    })
-    .catch(() => {
-      res.status(200).send({
-        success: true,
-        payload: []
-      });
+// Function to add a new user
+exports.addUser = async (req, res) => {
+  try {
+    const userData = req.body;
+    const newUser = await User.create(userData);
+    res.status(201).json({
+      success: true,
+      message: 'User registered successfully',
+      user: newUser
     });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message
+    });
+  }
 };
 
-module.exports.fetchSingleUser = (req, res) => {
-  Booking.find({ _id: req.params.id })
-    .then((data) => {
-      res.status(200).send({
-        success: true,
-        payload: data
-      });
-    })
-    .catch(() => {
-      res.status(200).send({
-        success: true,
-        payload: []
-      });
+// Function to fetch all users
+exports.userList = async (req, res) => {
+  try {
+    const users = await User.find({});
+    res.status(200).json({
+      success: true,
+      payload: users
     });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message
+    });
+  }
 };
 
-module.exports.addUser = (req, res) => {
-  const userInfo = req.body;
-  Booking.create(userInfo)
-    .then((doc) => {
-      res.status(201).send({
-        success: true,
-        payload: doc
-      });
-    })
-    .catch((err) => {
-      res.status(400).send({
+// Function to fetch a single user by ID
+exports.fetchSingleUser = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) {
+      return res.status(404).json({
         success: false,
-        error: {
-          message: err
-        }
+        message: 'User not found'
       });
+    }
+    res.status(200).json({
+      success: true,
+      payload: user
     });
-};
-
-module.exports.updateUser = (req, res) => {
-  const id = req.params.id;
-  const userInfo = req.body;
-  console.log(req.body);
-  Booking.updateOne({ _id: id }, userInfo)
-    .then((dbData) => {
-      res.status(200).send({
-        success: true,
-        payload: dbData
-      });
-    })
-    .catch((err) => {
-      res.status(400).send({
-        success: false,
-        error: {
-          message: err
-        }
-      });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message
     });
-};
-
-module.exports.deleteUser = (req, res) => {
-  const id = req.params.id;
-  Booking.deleteOne({ _id: id })
-    .then((dbInfo) => {
-      res.status(200).send({
-        success: true,
-        payload: dbInfo
-      });
-    })
-    .catch((err) => {
-      res.status(400).send({
-        success: false,
-        error: {
-          message: err
-        }
-      });
-    });
+  }
 };

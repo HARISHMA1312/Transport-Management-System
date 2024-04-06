@@ -167,9 +167,11 @@ function SaveUser() {
               onChange={(e) => setValueForm(e.target.value, 'pickupAddress')}
             />
           </Form.Group>
+          <Link to='/home'>
           <Button type='submit' variant='primary' className='text-right'>
             Submit
           </Button>
+          </Link>
         </Form>
       </div>
     </div>

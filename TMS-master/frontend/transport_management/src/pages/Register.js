@@ -36,7 +36,7 @@ function Register() {
           <button type="submit" className="btn">Submit</button>
           <button type="reset" className="btn reset-btn">Reset</button>
         </div>
-        <Link to="/SaveBook">
+        <Link to="/save">
             <button type="submit" className="btn">Login</button>
           </Link>
       </form>

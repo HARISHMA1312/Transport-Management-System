@@ -21,7 +21,7 @@ function LoginPage() {
             <input type="password" id="password" placeholder="Enter your password" />
           </div>
           {/* Add a Link to the SaveUser page */}
-          <Link to="/SaveBook">
+          <Link to="/Save">
             <button type="submit" className="btn">Login</button>
           </Link>
         </form>

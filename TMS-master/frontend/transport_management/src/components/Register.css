@@ -1,0 +1,75 @@
+/* Register.css */
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container styles */
+  #register-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header styles */
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form styles */
+  #register-form {
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Button container styles */
+  .btn-container {
+    text-align: center;
+    margin-top: 20px; /* Add margin to create space between buttons */
+  }
+  
+  /* Button styles */
+  .btn {
+    padding: 6px 16px; /* Small padding */
+    font-size: 14px; /* Small font size */
+    background-color: transparent; /* Transparent background */
+    color: #4caf50; /* Green color */
+    border: 2px solid #4caf50; /* Green border */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    margin: 0 10px; /* Add margin between buttons */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+  }
+  
+  .btn:hover {
+    background-color: #4caf50; /* Dark green background on hover */
+    color: #fff; /* White text on hover */
+    border-color: #4caf50; /* Dark green border on hover */
+  }
+  

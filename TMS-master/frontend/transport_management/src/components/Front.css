@@ -1,0 +1,78 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
+/* Front.css */
+
+#login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+#login-image {
+  text-align: center;
+}
+
+#login-image img {
+  width: 150px;
+  height: auto;
+}
+
+#login-form-container {
+  padding: 20px;
+}
+
+#login-form {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+#register-text {
+  text-align: center;
+  color: #333;
+}
+
+#register-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#register-text a:hover {
+  text-decoration: underline;
+}
